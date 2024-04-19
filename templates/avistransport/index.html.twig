@@ -1,0 +1,37 @@
+{# {% extends 'base.html.twig' %} #}
+
+{% block title %}Avistransport index{% endblock %}
+
+{% block body %}
+    <h1>Avistransport index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Idavis</th>
+                <th>Avis</th>
+                <th>Note</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for avistransport in avistransports %}
+            <tr>
+                <td>{{ avistransport.idavis }}</td>
+                <td>{{ avistransport.avis }}</td>
+                <td>{{ avistransport.note }}</td>
+                <td>
+                    <a href="{{ path('app_avistransport_show', {'idavis': avistransport.idavis}) }}">show</a>
+                    <a href="{{ path('app_avistransport_edit', {'idavis': avistransport.idavis}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_avistransport_new') }}">Create new</a>
+{% endblock %}

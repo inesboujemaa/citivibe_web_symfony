@@ -1,0 +1,16 @@
+{# templates/transport/avis.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Donner un avis{% endblock %}
+
+{% block body %}
+    <h1>Donner un avis</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.avis) }}
+        {{ form_row(form.note) }}
+
+        <button type="submit">Envoyer</button>
+    {{ form_end(form) }}
+{% endblock %}

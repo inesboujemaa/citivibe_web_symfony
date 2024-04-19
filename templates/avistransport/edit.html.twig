@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Avistransport{% endblock %}
+
+{% block body %}
+    <h1>Edit Avistransport</h1>
+
+    {{ include('avistransport/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_avistransport_index') }}">back to list</a>
+
+    {{ include('avistransport/_delete_form.html.twig') }}
+{% endblock %}

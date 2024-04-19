@@ -1,0 +1,193 @@
+{% extends 'baseA.html.twig' %}
+
+{% block title %}Ajouter un moyen de transport{% endblock %}
+
+{% block body %}
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <!--
+       ***********************************sidebare************************************* 
+    -->
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          CT 
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          City Vibe
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="./dashboard.html">
+              <i class="now-ui-icons design_app"></i>
+              <p>Acceuil</p>
+            </a>
+          </li>
+          <li>
+            <a href="./icons.html">
+              <i class="now-ui-icons education_atom"></i>
+              <p>Evenements</p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <i class="now-ui-icons location_map-big"></i>
+              <p>Lieux</p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="./notifications.html">
+              <i class="now-ui-icons ui-1_bell-53"></i>
+              <p>Transport</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Reservation</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Profil</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Reclamation</p>
+            </a>
+          </li>
+          <li class="active-pro">
+            <a href="./upgrade.html">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Parametres</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel" id="main-panel">
+
+      <div class="panel-header">
+        <div class="header text-center">
+          <h2 class="title" >Transport</h2>
+          <p class="category" style="font-size: 1.2em;">Trouvez votre moyen de transport idéal et explorez de nouvelles possibilités pour vous déplacer avec confort et efficacité.</p>
+
+        </div>
+      </div>
+      {#***********************************************************************************************#}
+      {#***********************************************************************************************#}
+<div class="content">
+    <div class="row justify-content-center">
+        <div class="col-md-10 d-flex align-items-center justify-content-center" style="background-image: url('{{ asset('assets_admin/img/bg5.jpg') }}'); background-size: cover; background-position: center;">
+            <div class="card rounded-lg shadow"> <!-- Ajouter un rayon aux coins et une ombre -->
+                <div class="card-body">
+                    <h2 class="card-title text-center" style="font-family: 'Arial', sans-serif; color: #555;">Ajouter un avis sur un transport</h2>
+                    {{ form_start(form, {'attr': {'novalidate':'novalidate', 'autocomplete': 'off'}}) }}
+                        <div class="mb-3">
+                                {{ form_errors(form.avis) }}
+
+                            {{ form_label(form.avis, 'Avis transport', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.avis, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                                                        {{ form_errors(form.note) }}
+
+                            {{ form_label(form.note, 'Note', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.note, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                        {{ form_errors(form.idt) }}
+                            {{ form_label(form.idt, 'ID Transport', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.idt, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        {# <div class="mb-3">
+                        {{ form_errors(form.duree) }}
+                            {{ form_label(form.duree, 'Durée', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.duree, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                             {{ form_errors(form.tarif) }}
+                            {{ form_label(form.tarif, 'Tarif', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.tarif, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                        <div class="mb-3">
+                        {{ form_errors(form.idavis) }}
+                            {{ form_label(form.idavis, 'Avis', {'attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(form.idavis, {'attr': {'class': 'form-control'}}) }}
+                        </div> #}
+
+                        <button type="submit" class="btn btn-primary btn-block">Ajouter</button>
+                         {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+              
+                  <div class="row">
+                    <div class="col-lg-8 ml-auto mr-auto">
+                      <div class="row">
+                        
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class=" container-fluid ">
+          <nav>
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="http://presentation.creative-tim.com">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright" id="copyright">
+            &copy; <script>
+              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets_admin/js/core/jquery.min.js"></script>
+  <script src="../assets_admin/js/core/popper.min.js"></script>
+  <script src="../assets_admin/js/core/bootstrap.min.js"></script>
+  <script src="../assets_admin/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets_admin/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets_admin/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets_admin/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets_admin/demo/demo.js"></script>
+{% endblock %}

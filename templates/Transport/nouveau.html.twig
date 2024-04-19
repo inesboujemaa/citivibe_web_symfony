@@ -1,0 +1,39 @@
+{# templates/Transport/nouveau.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Résultats de la recherche{% endblock %}
+
+{% block body %}
+    <h1>Résultats de la recherche</h1>
+
+    {# Formulaire de recherche #}
+    <form action="{{ path('search_transport') }}" method="GET">
+        <label for="station_depart">Station de départ :</label>
+        <input type="text" id="station_depart" name="station_depart" required>
+
+        <label for="station_arrive">Station d'arrivée :</label>
+        <input type="text" id="station_arrive" name="station_arrive" required>
+
+        <button type="submit">Rechercher</button>
+    </form>
+
+    {# Affichage des résultats de la recherche #}
+    {% if transports is empty %}
+        {# <p>Aucun transport trouvé pour les stations de départ "{{ station_depart }}" et d'arrivée "{{ station_arrive }}".</p> #}
+    {% else %}
+        <ul>
+            {% for transport in transports %}
+                <li>Type de transport : {{ transport.typet }}</li>
+                <li>Station de départ : {{ transport.stationDepart }}</li>
+                <li>Station d'arrivée : {{ transport.stationArrive }}</li>
+                <li>Durée : {{ transport.duree|date('H:i') }}</li>
+                <li>Tarif : {{ transport.tarif }}</li>
+                <br>
+                {# Lien ou bouton pour donner un avis #}
+                <a href="{{ path('submit_avis', {'id': transport.idt}) }}">Donner un avis</a>
+                <br><br>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
